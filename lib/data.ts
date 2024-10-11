@@ -83,6 +83,10 @@ export const skills = [
     text: "MongoDB",
   },
   {
+    icon: SiPrisma,
+    text: "Prisma",
+  },
+  {
     icon: SiAmazonaws,
     text: "AWS",
   },
@@ -104,10 +108,7 @@ export const skills = [
     icon: SiDocker,
     text: "Docker",
   },
-  {
-    icon: SiPrisma,
-    text: "Prisma",
-  },
+
   {
     icon: SiKubernetes,
     text: "Kubernetes",
@@ -135,11 +136,13 @@ export interface WorkExperience {
   position: string;
   description: string;
   years: string;
+  role: string;
 }
 
 export const workExperiences: WorkExperience[] = [
   {
-    company: "TrueDax",
+    company: "Truedax Studio Pvt. Ltd.",
+    role: "Software Engineer",
     logo: "https://www.truedax.io/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
     position: "Software Engineer",
     description:
@@ -147,7 +150,8 @@ export const workExperiences: WorkExperience[] = [
     years: "Apr, 2024 - Current",
   },
   {
-    company: "Satya Kabir",
+    company: "Satya Kabir E-solutions Pvt. Ltd.",
+    role: "React Developer",
     logo: "https://www.satyakabir.com/_next/image?url=https%3A%2F%2Fadmin.satyakabir.com%2Fstorage%2Fapp%2Fpublic%2Fimages%2Fbusiness_setting%2FNrg6RYA9witADGA2Tj6FL1VG6wbuAnfrJhcSFAbZ.png&w=1920&q=75",
     position: "React Developer",
     description:

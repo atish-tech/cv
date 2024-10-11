@@ -1,14 +1,11 @@
 "use client";
 import ActionButton from "@/components/action-button";
-import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import ProjectShowcase from "@/components/project-showcase";
 import Sidebar from "@/components/sidebar";
 import SkillOutline from "@/components/skill-outline";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Separator } from "@/components/ui/separator";
 import WorkShowcase from "@/components/work-showcase";
-import { motion } from "framer-motion";
 
 import {
   Project,
@@ -19,13 +16,14 @@ import {
   skills,
   workExperiences,
 } from "@/lib/data";
+import { SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
 
 export default function Home() {
   return (
     <div className="md:max-w-5xl mx-auto md:mt-8 ">
       <Navbar />
 
-      <div className="flex flex-col md:flex-row my-10 mx-10 md:mx-0 space-x-0 md:space-x-10 space-y-10 md:space-y-0 ">
+      <div className="flex flex-col md:flex-row my-10 mx-5 md:mx-0 space-x-0 md:space-x-10 space-y-10 md:space-y-0 ">
         <Sidebar />
 
         <div className="md:min-w-[65vh] min-w-full space-y-10">
@@ -37,11 +35,9 @@ export default function Home() {
             <div className="text-muted-foreground">
               {marketingHeadlines.subHeadline}
             </div>
-            <div>
-              <Separator />
-            </div>
+
             <div className="flex justify-between">
-              <ActionButton actionText="Hire me" />
+              <ActionButton email={aboutYou.email} actionText="Hire me" />
               <div className="space-y-1">
                 <h3 className="font-medium leading-none">
                   {aboutYou.yearsOfExperience}
@@ -55,7 +51,16 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground">Location</p>
               </div>
             </div>
+
+            <div>
+              <Separator />
+            </div>
+
             <div className="space-y-1">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                Tech Stack
+              </h2>
+
               <div className="space-y-2">
                 {skills.map((skill) => (
                   <SkillOutline
@@ -65,9 +70,43 @@ export default function Home() {
                   />
                 ))}
               </div>
-              <p className="text-xs text-muted-foreground">Tech stack</p>
             </div>
           </section>
+
+          {/* Codding Profile */}
+
+          <section id="coding-profile" key="coding-profile">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Coding Profile
+            </h2>
+            <div className="mt-5 rounded-xl border bg-card text-card-foreground shadow">
+              <div className="p-6 space-y-6">
+                <div className="space-y-2 flex gap-3 items-center">
+                  <SiLeetcode size={30} />
+                  <a
+                    className=""
+                    href="https://leetcode.com/atishthakur/"
+                    target="_blank"
+                  >
+                    @atishthakur
+                  </a>
+                </div>
+                <div>
+                  <Separator />
+                </div>
+                <div className="space-y-2 flex gap-3 items-center">
+                  <SiGeeksforgeeks size={30} />
+                  <a
+                    href="https://auth.geeksforgeeks.org/user/aatish__/profile"
+                    target="_blank"
+                  >
+                    @atishthakur
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Projects */}
           <section id="projects" key="projects">
             <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>

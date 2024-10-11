@@ -2,6 +2,7 @@ import { WorkExperience } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import DateRange from "./date-range";
+import { SiEnterprisedb } from "react-icons/si";
 
 interface WorkShowcaseProps {
   experience: WorkExperience;
@@ -15,16 +16,14 @@ export default function WorkShowcase({
   return (
     <div className="">
       <div className="space-y-2 ">
-        <div className="flex justify-between">
-          <div className="flex items-center space-x-4">
-            <Avatar>
-              <AvatarImage src={experience.logo} />
-              <AvatarFallback>AB</AvatarFallback>
-            </Avatar>
-            <h3 className="font-semibold leading-none tracking-tight">
-              {experience.company}
-            </h3>
-          </div>
+        <div className="flex items-center space-x-4">
+          <h3 className="font-semibold leading-none tracking-tight">
+            {experience.company}
+          </h3>
+        </div>
+        <div className="flex flex-col md:flex-row md:items-center justify-between">
+          <p className="dark:text-zinc-300">{experience.role}</p>
+
           <DateRange date={experience.years} />
         </div>
         <p className="text-sm text-muted-foreground pb-2">
