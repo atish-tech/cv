@@ -25,7 +25,7 @@ export default function Navbar() {
     <div className="border bg-card text-card-foreground p-3 shadow-sm md:rounded-lg flex justify-between items-center top-0 sticky z-50">
       <Logo onClick={() => navigateTo("/")} />
       {/* Navigation Menus */}
-      <div className="space-x-3 items-center">
+      <div className=" flex justify-center gap-1 items-center">
         <Button
           variant="outline"
           size="sm"
