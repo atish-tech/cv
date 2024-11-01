@@ -25,8 +25,11 @@ import {
   SiKubernetes,
   SiVirtualbox,
   SiCloudflare,
+  SiSocketdotio,
+  SiPuppeteer,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { icons } from "lucide-react";
 
 export const skills = [
   {
@@ -37,6 +40,11 @@ export const skills = [
     icon: SiJavascript,
     text: "JavaScript",
   },
+  {
+    icon: SiPython,
+    text: "Python",
+  },
+
   {
     icon: SiReact,
     text: "React",
@@ -75,6 +83,16 @@ export const skills = [
   },
 
   {
+    icon: SiPuppeteer,
+    text: "Puppeteer",
+  },
+
+  {
+    icon: SiSocketdotio,
+    text: "Socket IO",
+  },
+
+  {
     icon: BiLogoPostgresql,
     text: "PostgreSQL",
   },
@@ -87,6 +105,15 @@ export const skills = [
     text: "Prisma",
   },
   {
+    icon: SiGit,
+    text: "Git",
+  },
+
+  {
+    icon: SiSupabase,
+    text: "Supabase",
+  },
+  {
     icon: SiAmazonaws,
     text: "AWS",
   },
@@ -95,15 +122,6 @@ export const skills = [
     text: "Cloudflare",
   },
 
-  {
-    icon: SiSupabase,
-    text: "Supabase",
-  },
-
-  {
-    icon: SiGit,
-    text: "Git",
-  },
   {
     icon: SiDocker,
     text: "Docker",
@@ -119,6 +137,7 @@ export interface Project {
   title: string;
   description: string;
   link: string;
+  github: string;
 }
 
 export const projects: Project[] = [
@@ -126,7 +145,8 @@ export const projects: Project[] = [
     title: "Discord Server",
     description:
       "A real-time communication platform built with TypeScript, Next.js, Prisma, and SocketIO, offering secure authentication and versatile chat features. Users can engage in personal or group conversations using text, emojis, images, and PDFs, while also creating custom channels for audio, video, or text communication. This project emphasizes seamless user interaction and dynamic communication options, replicating core features of Discord.",
-    link: "https://github.com/atish-tech/connection-server",
+    link: "https://chat.atishthakur.codes/login",
+    github: "https://github.com/atish-tech/connection-server",
   },
 ];
 
@@ -164,7 +184,7 @@ export const aboutYou = {
   name: "Atish Kumar Thakur",
   description:
     "I’m Atish Kumar Thakur, a Full-Stack Developer with expertise in building scalable, high-performance web applications. With a strong foundation in both front-end and back-end development, I specialize in creating dynamic user experiences and optimizing performance across various platforms.",
-  yearsOfExperience: "8 months",
+  yearsOfExperience: "9 months",
   location: "Bengaluru 🇮🇳",
   email: "katish332@gmail.com",
 };
